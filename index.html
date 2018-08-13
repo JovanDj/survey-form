@@ -22,30 +22,63 @@
     <main>
         <div class="container">
             <form id="survey-form">
-                <label for="name" id="name-label">Name</label>
-                <input id="name" type="text" placeholder="Name:" required>
 
-                <label for="email" id="email-label">Email</label>
-                <input id="email" type="email" placeholder="Email:" required>
+                <div class="form-group">
+                    <label for="name" id="name-label">Name</label>
+                    <input id="name" class="form-control" type="text" placeholder="Name:" required>
+                </div>
 
-                <label for="number" id="number-label">Number</label>
-                <input type="number" name="number" id="number" min="0" max="18" placeholder="Number:">
+                <div class="form-group">
+                    <label for="email" id="email-label">Email</label>
+                    <input id="email" class="form-control" type="email" placeholder="Email:" required>
+                </div>
 
-                <select id="dropdown">
-                    <option disabled>Select option</option>
-                    <option value="1">Option 1</option>
-                    <option value="2">Option 2</option>
-                </select>
+                <div class="form-group">
+                    <label for="number" id="number-label">Number</label>
+                    <input type="number" class="form-control" name="number" id="number" min="0" max="18" placeholder="Number:">
+                </div>
 
-                <input type="radio" name="rad" value="1">
-                <input type="radio" name="rad" value="2">
+                <div class="form-group">
+                    <select id="dropdown" class="form-control">
+                        <option disabled>Select option</option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                    </select>
+                </div>
 
-                <input type="checkbox" name="check" value="1">
-                <input type="checkbox" name="check" value="2">
 
-                <textarea name="" id="" cols="30" rows="10"></textarea>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                    <label class="form-check-label" for="exampleRadios1">
+                        Default radio
+                    </label>
+                </div>
 
-                <button id="submit">Submit</button>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                    <label class="form-check-label" for="exampleRadios2">
+                        Second default radio
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="1" id="defaultCheck1">
+                    <label class="form-check-label" for="defaultCheck1">
+                        Default checkbox
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="1" id="defaultCheck2" disabled>
+                    <label class="form-check-label" for="defaultCheck2">
+                        Disabled checkbox
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <textarea class="form-control" cols="30" rows="10"></textarea>
+                </div>
+
+                <button id="submit" class="btn btn-primary">Submit</button>
 
             </form>
         </div>
