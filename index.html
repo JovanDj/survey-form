@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Survey Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container text-center">
+            <h1 id="title">Survey Form</h1>
+            <p id="description">Survey form for surveying people</p>
+        </div>
+    </header>
+
+
+    <main>
+        <div class="container">
+            <form id="survey-form">
+                <label for="name" id="name-label">Name</label>
+                <input id="name" type="text" placeholder="Name:" required>
+
+                <label for="email" id="email-label">Email</label>
+                <input id="email" type="email" placeholder="Email:" required>
+
+                <label for="number" id="number-label">Number</label>
+                <input type="number" name="number" id="number" min="0" max="18" placeholder="Number:">
+
+                <select id="dropdown">
+                    <option disabled>Select option</option>
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                </select>
+
+                <input type="radio" name="rad" value="1">
+                <input type="radio" name="rad" value="2">
+
+                <input type="checkbox" name="check" value="1">
+                <input type="checkbox" name="check" value="2">
+
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+
+                <button id="submit">Submit</button>
+
+            </form>
+        </div>
+    </main>
+
+    <script async src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js "></script>
+</body>
+
+</html>
