@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Survey Form</title>
+    <title>Band member survey</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/main.css">
@@ -13,8 +13,8 @@
 
     <header>
         <div class="container text-center">
-            <h1 id="title">Survey Form</h1>
-            <p id="description">Survey form for surveying people</p>
+            <h1 id="title">Band member survey</h1>
+            <p id="description">Survey for new band members of a band</p>
         </div>
     </header>
 
@@ -23,58 +23,69 @@
             <form id="survey-form">
 
                 <div class="form-group">
-                    <label for="name" id="name-label">Name</label>
+                    <label for="name" id="name-label">*Name</label>
                     <input id="name" class="form-control" type="text" placeholder="Name:" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="email" id="email-label">Email</label>
+                    <label for="email" id="email-label">*Email</label>
                     <input id="email" class="form-control" type="email" placeholder="Email:" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="number" id="number-label">Number</label>
-                    <input type="number" class="form-control" name="number" id="number" min="0" max="18" placeholder="Number:">
+                    <label for="number" id="number-label">Years of experience</label>
+                    <input type="number" class="form-control" name="yearsOfExperience" id="number" min="1" max="50" placeholder="Years of experience:">
                 </div>
 
                 <div class="form-group">
-                    <select id="dropdown" class="form-control">
-                        <option disabled>Select option</option>
-                        <option value="1">Option 1</option>
-                        <option value="2">Option 2</option>
+                    <label for="instrument">What instrument do you play?</label>
+
+                    <select name="instrument" id="dropdown" class="form-control">
+                        <option disabled></option>
+                        <option value="guitar">Guitar</option>
+                        <option value="bass">Bass</option>
+                        <option value="drums">Drums</option>
+                        <option value="vocals">Vocals</option>
+
                     </select>
                 </div>
 
 
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                    <label class="form-check-label" for="exampleRadios1">
-                        Default radio
+
+                    <input class="form-check-input" type="radio" name="musicTaste" id="likesMetal" value="yes" checked>
+                    <label class="form-check-label" for="musicTaste">
+                        I like heavy metal.
                     </label>
                 </div>
 
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                    <input class="form-check-input" type="radio" name="musicTaste" id="does'ntLikeMetal" value="no">
                     <label class="form-check-label" for="exampleRadios2">
-                        Second default radio
+                        I don't like heavy metal.
                     </label>
                 </div>
 
+                <hr>
+
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="1" id="defaultCheck1">
-                    <label class="form-check-label" for="defaultCheck1">
-                        Default checkbox
+                    <input class="form-check-input" type="checkbox" value="workweek" id="workweek" name="workweek">
+                    <label class="form-check-label" for="workweek">
+                        I can play during the workweek.
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="1" id="defaultCheck2" disabled>
-                    <label class="form-check-label" for="defaultCheck2">
-                        Disabled checkbox
+                    <input class="form-check-input" type="checkbox" value="weekend" id="weekend" name="weekend">
+                    <label class="form-check-label" for="weekend">
+                        I can play on weekends.
                     </label>
                 </div>
+
+                <hr>
 
                 <div class="form-group">
-                    <textarea class="form-control" cols="30" rows="10"></textarea>
+                    <label for="additional">Additional information:</label>
+                    <textarea class="form-control" name="additional" cols="30" rows="10"></textarea>
                 </div>
 
                 <button id="submit" class="btn btn-primary">Submit</button>
